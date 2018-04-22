@@ -8,7 +8,7 @@ def line (katz_deli_line)
     i = 0
     while i < katz_deli_line.length
       i++
-      currList.push(i + "." + katz_deli_line[i-1])
+      currList << (i + "." + katz_deli_line[i-1])
     end
     list = currList.join(" ")
     puts "The line is currently: " + list
