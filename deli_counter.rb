@@ -1,17 +1,14 @@
 katz_deli = []
 
 def line (katz_deli_line)
+  curr_line = []
   if katz_deli_line.length == 0
     puts "The line is currently empty."
   else
-    currList = []
-    i = 0
-    while i < katz_deli_line.length
-      i++
-      currList.push(i + "." + katz_deli_line[i-1])
+    curr_line.each.with_index(0) do |name, index|
+      curr_line.push("#{index}. #{name}")
     end
-    list = currList.join(" ")
-    puts "The line is currently: " + list
+    puts "The line is currently: #{curr_line.join(" ")}"
   end
 end
 
